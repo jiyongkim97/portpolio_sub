@@ -80,9 +80,8 @@ preloaderBtn.addEventListener("mouseup",()=>{
 })
 
 
-const listStyleChangeStartY = 450
-const listStyleChangeEndY = 980
-
+const listStyleChangeStartY = 550
+const listStyleChangeEndY = 1580
 const listItem = document.querySelectorAll(".item")
 
 const division = (listStyleChangeEndY - listStyleChangeStartY) / listItem.length

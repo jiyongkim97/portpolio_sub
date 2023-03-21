@@ -129,7 +129,7 @@ table {
 }
 
 body {
-  background-color: #111111;
+background-color: #000;
   cursor: none !important;
 }
 button {
@@ -249,7 +249,7 @@ button {
 
 #header_wrapper{
   display: flex;
-  color: white;
+  color: #154c79;
   margin: 0 auto;
   gap: 20px;
   justify-content: center;
@@ -257,37 +257,57 @@ button {
 }
 #header{
   font-size: 24px;
-  color: white;
+  color: 
+  #154c79;
   text-align: center;
   justify-content: center;
 }
 
 @keyframes moveToRight {
-  0% {
+  from{
     transform: translateX(-100px);
   }
- 50%{
-  transform: translateX(50px);
- }
-  100%{
-    transform: translateX(-100px);
+
+  to{
+    transform: translateX(0);
+  }
+}
+@keyframes moveToLeft {
+  from{
+    transform: translateX(100px);
+  }
+
+  to{
+    transform: translateX(0);
   }
 }
 
 #main_image_wraper {
   display: flex;
-  animation: moveToRight 4s ease-in-out;
-  animation-iteration-count: infinite;
   padding-top: 100px;
   display: flex;
   justify-content: center;
+
+}
+
+#main_image_wraper .hansungImg{
+  animation: moveToRight 2s ease-in-out;
+}
+#main_image_wraper .crossImg{
+  height: 200px;
+  width: 100px;
+  padding-top: 100px;
+}
+ 
+#main_image_wraper .nowonImg{
+  animation: moveToLeft 2s ease-in-out;
 }
 
 #main_text {
-  padding-top: 10px;
+  
   display: flex;
-  justify-content: center;
-  color: white;
+ justify-content: center;
+  color:#154c79;
   text-align: center;
   font-size: 28px;
 }
@@ -336,7 +356,12 @@ button {
 }
 
 ul {
-  padding-bottom: 400px;
+  padding-bottom: 10px;
+}
+
+#main_list{
+  border-bottom: white 1px solid;
+  padding-bottom: 50px;
 }
 
 #item_container {
@@ -353,7 +378,7 @@ ul {
 .item#on {
   color: white;
 }
-@keyframes roundImg{
+/* @keyframes roundImg{
   0%{
   transform: rotateX(360deg);
   }
@@ -375,11 +400,14 @@ ul {
   animation-name: roundImg;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-}
+} */
 
 .poster_parallax {
+  background: linear-gradient(#000, #154c79);
+  /* background-color: #154c79; */
+  padding-top: 50px;
   position: relative;
-  height: 1500px;
+  height: 1300px;
 }
 
 .poster_image{
